@@ -6,28 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel'
 import { Button } from 'react-bootstrap';
 
-const Home = () => {
+function Home ()  {
  
 return(
  
     
 <div>
-
-<ul class="nav justify-content-center" id="nav">
-
-<li id='logo' class="nav-item">
-          <a class="nav-link active" href="#">#</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Submit Tickets</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Units Available</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Screening</a>
-        </li>
-      </ul>
 
 
 
@@ -70,6 +54,7 @@ return(
   
 
 </div>
+
 
 </div>
 

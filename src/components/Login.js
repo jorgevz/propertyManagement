@@ -1,19 +1,25 @@
 import React from 'react';
+import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
- const Login = () => {
+function Login () {
 
     return(
        <div>
            <form>
+
         <input placeholder='username'/>
         <input placeholder='password'/>
-        <hr/>
-        <button>Login</button>
-        <h5>Don't have account ? Sign Up !</h5>
-        <button>Sign Up</button>
+        
+        <Button variant='primary'>Login</Button>
+       
+        <h6>Don't have account ? Sign Up !</h6>
+       
+        <Button variant='info'>Sign Up</Button>
+
            </form>
+
        </div>
     )
 

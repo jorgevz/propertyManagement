@@ -15,7 +15,8 @@ return(
 
 
 <Router>
-<div>
+<div id="page-container">
+<div id="content-wrap">
 
 <ul class="nav justify-content-center" id="nav">
 
@@ -34,7 +35,7 @@ return(
       </ul>
 
 
-</div>
+
 
 
 <Switch>
@@ -45,6 +46,21 @@ return(
 
 </Switch>
 
+<footer id="footer" class="py-4 bg-dark text-white-50">
+        <div class=" text-center">
+
+          <small>Copyright &copy; </small>
+
+          <small>rentMe🏢</small>
+          
+        
+        </div>
+
+        
+      </footer>
+
+</div>
+</div>
 </Router>
 
 
