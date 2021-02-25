@@ -3,17 +3,23 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  Link
   } from 'react-router-dom'
 import Home from './Home';
+import Dashboard from './Dashboard'
 import Login from './Login';
+import Signup from './Signup';
+import { AuthProvider } from "./Auth";
+import PrivateRoute from "./PrivateRoute";
 
 
-function Routing () {
+
+
+const Routing = () => {
 
 return(
 
-
+<AuthProvider>
 <Router>
 <div id="page-container">
 <div id="content-wrap">
@@ -24,13 +30,13 @@ return(
 <a class="nav-link active" href="#"><Link to='/'>rentMe🏢</Link></a>
         </li>
         <li class="nav-item">
-<a class="nav-link active" href="#"><Link to='/login'>Submit Tickets</Link></a>
+<a class="nav-link active" ><Link to='/Login'>Submit Tickets</Link></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Units Available</a>
+          <a class="nav-link"><Link>Units Available</Link></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Screening</a>
+          <a class="nav-link" href="#"><Link>Screening</Link></a>
         </li>
       </ul>
 
@@ -41,8 +47,9 @@ return(
 <Switch>
         
 <Route exact path='/' component={Home}/>
-<Route path='/login' component={Login}/>
-
+<Route path='/Login' component={Login} />
+<Route path='/Signup' component={Signup}/>
+<PrivateRoute  path="/Dashboard" component={Dashboard} />
 
 </Switch>
 
@@ -62,7 +69,7 @@ return(
 </div>
 </div>
 </Router>
-
+</AuthProvider>
 
 
 

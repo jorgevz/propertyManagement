@@ -1,12 +1,12 @@
 import React from 'react';
-// import {apt1} from '../images/apt1.jpg';
-// import {apt2} from '../images/apt2.jpg';
+import {apt1} from '../images/apt1.jpg';
+import {apt2} from '../images/apt2.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import {Carousel} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
 import { Button } from 'react-bootstrap';
 
-function Home ()  {
+const Home = () => {
  
 return(
  

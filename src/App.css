@@ -1,4 +1,6 @@
 #nav{
+display: flex;
+justify-content: space-evenly;
 background-color: whitesmoke;
 width: 100%;
 text-align: center;
@@ -22,7 +24,7 @@ min-height: 100vh;
 }
 
 #content-wrap {
-    padding-bottom: 2.5rem;  
+padding-bottom: 2.5rem;  
 }
 
 
@@ -33,11 +35,16 @@ min-height: 100vh;
     height: 30px;            
 }
 
-#form{
+.form{
 display: flex;
 flex-direction: column;
 justify-content: space-around;
 position: absolute;
 top: 40%;
 left: 40%;
+
+}
+
+.input{
+line-height: 30px;
 }
