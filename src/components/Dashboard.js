@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Fire from './Fire';
 import emailjs from 'emailjs-com';
 import {Button} from 'react-bootstrap';
+import axios from 'axios';
 
 
 class Dashboard extends React.Component {
@@ -19,7 +20,8 @@ unitNumber: ''
 }
 }
 
-sendEmail = (event) => {
+
+handleSubmit = (event) => {
     event.preventDefault();
 
     emailjs.sendForm('gmail', 'template_ubkybhk', event.target, 'user_OEDF711LULQkIhj373RPR')
@@ -31,8 +33,17 @@ sendEmail = (event) => {
           console.log(error.text);
       });
 
-      this.props.history.push('/');
       
+axios.post('http://localhost:8080/tenants-management/v1/tenants', this.state)
+.then(response => {
+    console.log(response)
+})
+.catch(error => {
+    console.log(error)
+})
+
+this.props.history.push('/');
+
   }
 
   handleChange = (e) => {
@@ -41,33 +52,36 @@ sendEmail = (event) => {
     console.log(this.state)
     }
 
+
+
 render(){ 
+
+  
+
+
 return(
 
-<div>
+
+
+<div class='form'>
 <h3>Hello</h3>
-<h6>Please report your issue</h6>
+<h6>Please report your issue below</h6>
 
-<form class='form' onSubmit={this.sendEmail} method='POST'>
-<input placeholder='Full Name' name='fullName' onChange={this.handleChange} onSubmit={this.sendEmail} value={this.state.firstName}/>
+<form  onSubmit={this.handleSubmit} method='POST'>
+<input placeholder='Full Name' name='fullName' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.firstName}/>
+<br/>
 <br/>
 
-<input placeholder='Issue' name='issue' onChange={this.handleChange} onSubmit={this.sendEmail} value={this.state.issue}/>
-    {/* <option>Fading paint</option>
-    <option>Clogs and Leaks</option>
-    <option>Pest control</option>
-    <option>Malfunctioning AC units</option>
-    <option>Heating issue</option>
-    <option>Flooring</option> */}
+<input placeholder='Issue' name='issue' type='text' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.issue} /> 
 
 <br/>
-
-<input placeholder='Building Number' name='buildingNumber' onChange={this.handleChange} onSubmit={this.sendEmail} value={this.state.buildingNumber}/>
 <br/>
-
-<input placeholder='Unit Number' name='unitNumber' onChange={this.handleChange} onSubmit={this.sendEmail} value={this.state.unitNumber}/>
+<input placeholder='Building Number' name='buildingNumber' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.buildingNumber}/>
 <br/>
-
+<br/>
+<input placeholder='Unit Number' name='unitNumber' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.unitNumber}/>
+<br/>
+<br/>
 <Button type='submit' variant='success'>Submit Ticket</Button>
 <br/>
 <br/>

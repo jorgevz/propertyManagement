@@ -38,11 +38,11 @@ padding-bottom: 2.5rem;
 .form{
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: space-between;
 position: absolute;
-top: 40%;
-left: 40%;
-
+top: 30vh;
+left: 40vw;
+align-items: center;
 }
 
 .input{
