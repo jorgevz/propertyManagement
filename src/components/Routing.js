@@ -6,11 +6,13 @@ import {
   Link
   } from 'react-router-dom'
 import Home from './Home';
-import Dashboard from './Dashboard'
+import Dashboard from './Dashboard';
+import Units from './Units';
 import Login from './Login';
 import Signup from './Signup';
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
+import Contact from './Contact';
 
 
 
@@ -27,16 +29,17 @@ return(
 <ul class="nav justify-content-center" id="nav">
 
 <li id='logo' class="nav-item">
-<a class="nav-link active" href="#"><Link to='/'>rentMe🏢</Link></a>
+<a class="nav-link active"><Link to='/'>rentMe🏢</Link></a>
         </li>
         <li class="nav-item">
 <a class="nav-link active" ><Link to='/Login'>Submit Tickets</Link></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><Link>Units Available</Link></a>
+          <a class="nav-link"><Link to='/Units'>Units Available</Link></a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#"><Link>Screening</Link></a>
+          <a class="nav-link"><Link to='/Contact'>Contact Us</Link></a>
         </li>
       </ul>
 
@@ -47,7 +50,9 @@ return(
 <Switch>
         
 <Route exact path='/' component={Home}/>
+<Route exact path='/Units' component={Units}/>
 <Route path='/Login' component={Login} />
+<Route path='/Contact' component={Contact} />
 <Route path='/Signup' component={Signup}/>
 <PrivateRoute  path="/Dashboard" component={Dashboard} />
 
