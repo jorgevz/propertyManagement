@@ -22,17 +22,17 @@ const Routing = () => {
 return(
 
 <AuthProvider>
-<Router>
-<div id="page-container">
-<div id="content-wrap">
+  <Router>
+    <div id="page-container">
+      <div id="content-wrap">
 
-<ul class="nav justify-content-center" id="nav">
+          <ul class="nav justify-content-center" id="nav">
 
-<li id='logo' class="nav-item">
-<a class="nav-link active"><Link to='/'>rentMe🏢</Link></a>
-        </li>
+              <li id='logo' class="nav-item">
+                <a class="nav-link active"><Link to='/'>rentMe🏢</Link></a>
+              </li>
         <li class="nav-item">
-<a class="nav-link active" ><Link to='/Login'>Submit Tickets</Link></a>
+            <a class="nav-link active" ><Link to='/Login'>Submit Tickets</Link></a>
         </li>
         <li class="nav-item">
           <a class="nav-link"><Link to='/Units'>Units Available</Link></a>
@@ -49,12 +49,12 @@ return(
 
 <Switch>
         
-<Route exact path='/' component={Home}/>
-<Route exact path='/Units' component={Units}/>
-<Route path='/Login' component={Login} />
-<Route path='/Contact' component={Contact} />
-<Route path='/Signup' component={Signup}/>
-<PrivateRoute  path="/Dashboard" component={Dashboard} />
+      <Route exact path='/' component={Home}/>
+      <Route exact path='/Units' component={Units}/>
+      <Route path='/Login' component={Login} />
+      <Route path='/Contact' component={Contact} />
+      <Route path='/Signup' component={Signup}/>
+      <PrivateRoute  path="/Dashboard" component={Dashboard} />
 
 </Switch>
 

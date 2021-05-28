@@ -64,30 +64,30 @@ return(
 
 
 <div class='form'>
-<h3>Hello</h3>
-<h6>Please report your issue below</h6>
+      <h3>Hello</h3>
+        <h6>Please report your issue below</h6>
 
-<form  onSubmit={this.handleSubmit} method='POST'>
-<input placeholder='Full Name' name='fullName' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.firstName}/>
-<br/>
-<br/>
+    <form  onSubmit={this.handleSubmit} method='POST'>
+        <input placeholder='Full Name' name='fullName' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.firstName}/>
+            <br/>
+            <br/>
 
-<input placeholder='Issue' name='issue' type='text' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.issue} /> 
+        <input placeholder='Issue' name='issue' type='text' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.issue} /> 
 
-<br/>
-<br/>
-<input placeholder='Building Number' name='buildingNumber' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.buildingNumber}/>
-<br/>
-<br/>
-<input placeholder='Unit Number' name='unitNumber' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.unitNumber}/>
-<br/>
-<br/>
-<Button type='submit' variant='success'>Submit Ticket</Button>
-<br/>
-<br/>
-<br/>
-<Button variant='danger' onClick={() => Fire.auth().signOut()}>Sign out</Button>
-</form>
+            <br/>
+            <br/>
+        <input placeholder='Building Number' name='buildingNumber' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.buildingNumber}/>
+            <br/>
+            <br/>
+        <input placeholder='Unit Number' name='unitNumber' onChange={this.handleChange} onSubmit={this.handleSubmit} value={this.state.unitNumber}/>
+            <br/>
+            <br/>
+        <Button type='submit' variant='success'>Submit Ticket</Button>
+            <br/>
+            <br/>
+            <br/>
+        <Button variant='danger' onClick={() => Fire.auth().signOut()}>Sign out</Button>
+    </form>
 </div>
 
 );

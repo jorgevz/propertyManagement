@@ -1,7 +1,7 @@
 import React, {useCallback, useContext} from 'react';
 import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { withRouter, Redirect } from "react-router";
+import {  Redirect } from "react-router";
 import { AuthContext } from "./Auth.js";
 import Fire from './Fire';
 
